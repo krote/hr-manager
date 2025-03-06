@@ -16,6 +16,10 @@
 # next.js
 /.next/
 /out/
+main
+dist
+renderer/.next
+renderer/out
 
 # production
 /build
