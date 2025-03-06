@@ -1,6 +1,10 @@
 {
+  "/about": "pages/about.html",
+  "/": "pages/index.html",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/initial-props": "pages/initial-props.js",
+  "/detail/[id]": "pages/detail/[id].js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }

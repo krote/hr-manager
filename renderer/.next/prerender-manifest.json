@@ -1,0 +1,92 @@
+{
+  "version": 4,
+  "routes": {
+    "/detail/101": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/detail/[id]",
+      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/101.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/detail/102": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/detail/[id]",
+      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/102.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/detail/103": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/detail/[id]",
+      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/103.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/detail/104": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/detail/[id]",
+      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/104.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/initial-props": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/initial-props.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
+  "dynamicRoutes": {
+    "/detail/[id]": {
+      "routeRegex": "^/detail/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/[id].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/jX1GPAhmmzMhR74yISaVF/detail/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "885db2d8cd231ffdf260e785577b09e9",
+    "previewModeSigningKey": "bc3a703a2a8afe445e337b00b7685994119d6dae24c5da19ab9fe0d0ab397865",
+    "previewModeEncryptionKey": "dfb4c67e75b66998f2f45dfdfb5f94f6fe87428c81434e5a248c5d1075a38959"
+  }
+}
