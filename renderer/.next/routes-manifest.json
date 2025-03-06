@@ -49,12 +49,12 @@
       "routeKeys": {
         "nxtPid": "nxtPid"
       },
-      "dataRouteRegex": "^/_next/data/jX1GPAhmmzMhR74yISaVF/detail/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/jX1GPAhmmzMhR74yISaVF/detail/(?<nxtPid>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/zOby42MDC6tdXkTE2naKU/detail/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/zOby42MDC6tdXkTE2naKU/detail/(?<nxtPid>[^/]+?)\\.json$"
     },
     {
       "page": "/initial-props",
-      "dataRouteRegex": "^/_next/data/jX1GPAhmmzMhR74yISaVF/initial-props\\.json$"
+      "dataRouteRegex": "^/_next/data/zOby42MDC6tdXkTE2naKU/initial-props\\.json$"
     }
   ],
   "rsc": {

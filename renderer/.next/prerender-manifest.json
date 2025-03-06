@@ -4,7 +4,7 @@
     "/detail/101": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/detail/[id]",
-      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/101.json",
+      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/101.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -17,7 +17,7 @@
     "/detail/102": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/detail/[id]",
-      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/102.json",
+      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/102.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -30,7 +30,7 @@
     "/detail/103": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/detail/[id]",
-      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/103.json",
+      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/103.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -43,7 +43,7 @@
     "/detail/104": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/detail/[id]",
-      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/104.json",
+      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/104.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -56,7 +56,7 @@
     "/initial-props": {
       "initialRevalidateSeconds": false,
       "srcRoute": null,
-      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/initial-props.json",
+      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/initial-props.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -70,9 +70,9 @@
   "dynamicRoutes": {
     "/detail/[id]": {
       "routeRegex": "^/detail/([^/]+?)(?:/)?$",
-      "dataRoute": "/_next/data/jX1GPAhmmzMhR74yISaVF/detail/[id].json",
+      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/[id].json",
       "fallback": false,
-      "dataRouteRegex": "^/_next/data/jX1GPAhmmzMhR74yISaVF/detail/([^/]+?)\\.json$",
+      "dataRouteRegex": "^/_next/data/zOby42MDC6tdXkTE2naKU/detail/([^/]+?)\\.json$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -85,8 +85,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "885db2d8cd231ffdf260e785577b09e9",
-    "previewModeSigningKey": "bc3a703a2a8afe445e337b00b7685994119d6dae24c5da19ab9fe0d0ab397865",
-    "previewModeEncryptionKey": "dfb4c67e75b66998f2f45dfdfb5f94f6fe87428c81434e5a248c5d1075a38959"
+    "previewModeId": "b37b21104b6f8536d0818f19eb569680",
+    "previewModeSigningKey": "2626e7d862039df9ef453740fa166f0b0d83329bf8299dcf9739d6f9d7d0a27d",
+    "previewModeEncryptionKey": "e6e5be9c74f1323ef9fd1a7217ad7f3e1b0f70d0dea0bc195baea78f327b2d4e"
   }
 }
