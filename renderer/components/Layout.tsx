@@ -1,12 +1,29 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Sidebar from './Sidebar';
+import Header from './Header';
 
 type Props = {
   children: ReactNode;
   title?: string;
 };
 
+const Layout = ({ children}) => {
+  return (
+    <div classname="flex h-screen bg-gray-100">
+      <Sidebar/>
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <Header />
+        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
+          {children}
+        </main>
+      </div>
+    </div>
+  )
+}
+
+/*
 const Layout = ({ children, title = "This is the default title" }: Props) => (
   <div>
     <Head>
@@ -27,5 +44,5 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
     </footer>
   </div>
 );
-
+*/
 export default Layout;
