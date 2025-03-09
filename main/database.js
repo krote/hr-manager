@@ -24,8 +24,53 @@ async function initDatabases(){
                 reject(err);
                 return;
             }
-        })
-    })
+
+            // SQLiteテーブルの作成
+            db.serialize( () => {
+                db.run(`CREATE TABLE IF NOT EXISTS uers(
+                    id TEXT PRIMARY KEY,
+                    name TEXT NOT NULL,
+                    email TEXT UNIQUE,
+                    role TEXT,
+                    department TEXT,
+                    manager_id TEXT,
+                    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+                )`);
+
+                resolve();
+            });
+        });
+    });
 }
 
+async function getUsers() {
+    return new Promise((resolve, reject) => {
+        db.all("SELECT * FROM users ORDER BY name", [], (err,rows) => {
+            if(err){
+                reject(err);
+                return;
+            }
+            resolve(rows);
+        });
+    });
+}
+
+async function getUserById(id) {
+    return new Promise((resolve, reject) => {
+        db.get("SELECT * FROM users WHERE id = ?", [id], (err, row) =>{
+            if(err){
+                reject(err);
+                return;
+            }
+            resolve(row);
+        });
+    });
+}
+
+module.exports = {
+    initDatabases,
+    getUserById,
+    getUsers
+};
 
