@@ -130,7 +130,7 @@ const DataGraph: React.FC<DataGraphProps> = ({ data }) => {
         },
       },
     };
-
+/*
     switch (chartType) {
       case 'bar':
         return <Bar data={chartData} options={options as ChartOptions<'bar'>} height={300} />;
@@ -143,6 +143,7 @@ const DataGraph: React.FC<DataGraphProps> = ({ data }) => {
       default:
         return <Bar data={chartData} options={options as ChartOptions<'bar'>} height={300} />;
     }
+        */
   };
 
   return (

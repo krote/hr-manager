@@ -1,10 +1,23 @@
 {
   "version": 4,
   "routes": {
+    "/initial-props": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/07jcu-J1HnI8gt9-5MSQa/initial-props.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/detail/101": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/detail/[id]",
-      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/101.json",
+      "dataRoute": "/_next/data/07jcu-J1HnI8gt9-5MSQa/detail/101.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -17,7 +30,7 @@
     "/detail/102": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/detail/[id]",
-      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/102.json",
+      "dataRoute": "/_next/data/07jcu-J1HnI8gt9-5MSQa/detail/102.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -30,7 +43,7 @@
     "/detail/103": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/detail/[id]",
-      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/103.json",
+      "dataRoute": "/_next/data/07jcu-J1HnI8gt9-5MSQa/detail/103.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -43,20 +56,7 @@
     "/detail/104": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/detail/[id]",
-      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/104.json",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/initial-props": {
-      "initialRevalidateSeconds": false,
-      "srcRoute": null,
-      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/initial-props.json",
+      "dataRoute": "/_next/data/07jcu-J1HnI8gt9-5MSQa/detail/104.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -70,9 +70,9 @@
   "dynamicRoutes": {
     "/detail/[id]": {
       "routeRegex": "^/detail/([^/]+?)(?:/)?$",
-      "dataRoute": "/_next/data/zOby42MDC6tdXkTE2naKU/detail/[id].json",
+      "dataRoute": "/_next/data/07jcu-J1HnI8gt9-5MSQa/detail/[id].json",
       "fallback": false,
-      "dataRouteRegex": "^/_next/data/zOby42MDC6tdXkTE2naKU/detail/([^/]+?)\\.json$",
+      "dataRouteRegex": "^/_next/data/07jcu\\-J1HnI8gt9\\-5MSQa/detail/([^/]+?)\\.json$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -85,8 +85,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "b37b21104b6f8536d0818f19eb569680",
-    "previewModeSigningKey": "2626e7d862039df9ef453740fa166f0b0d83329bf8299dcf9739d6f9d7d0a27d",
-    "previewModeEncryptionKey": "e6e5be9c74f1323ef9fd1a7217ad7f3e1b0f70d0dea0bc195baea78f327b2d4e"
+    "previewModeId": "16fd63e60252ca2ef3cbcdba0b6a9916",
+    "previewModeSigningKey": "8c5184752620e7be55c4f299c87910429573fbce5d22557285237cab98ab02d0",
+    "previewModeEncryptionKey": "6a3d65f334acbc1eb4da24a24e76b31fb502a8d62e53511972d63a794bd4eb43"
   }
 }

@@ -7,13 +7,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = require("path");
 const url_1 = require("url");
 // Packages
-const {app, ipcMain, BrowserWindow} = require("electron");
-const { create } = require("domain");
+const electron_1 = require("electron");
 const electron_is_dev_1 = __importDefault(require("electron-is-dev"));
 const electron_next_1 = __importDefault(require("electron-next"));
-
-function createWindow() {
-    mainWindow = new BrowserWindow({
+// Prepare the renderer once the app is ready
+electron_1.app.on("ready", async () => {
+    await (0, electron_next_1.default)("./renderer");
+    const mainWindow = new electron_1.BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
@@ -22,7 +22,6 @@ function createWindow() {
             preload: (0, path_1.join)(__dirname, "preload.js"),
         },
     });
-
     const url = electron_is_dev_1.default
         ? "http://localhost:8000/"
         : (0, url_1.format)({
@@ -31,29 +30,11 @@ function createWindow() {
             slashes: true,
         });
     mainWindow.loadURL(url);
-
-    mainWindow.on('closed', () => {
-        mainWindow = null;
-    });
-}
-
-
-
-// Prepare the renderer once the app is ready
-app.whenReady().then(() => {
-    createWindow();
-
-    app.on('activate', () => {
-        if(BrowserWindow.getAllWindows().length === 0){
-            createWindow();
-        }
-    });
 });
-
 // Quit the app once all windows are closed
-app.on("window-all-closed", app.quit);
+electron_1.app.on("window-all-closed", electron_1.app.quit);
 // listen the channel `message` and resend the received message to the renderer process
-ipcMain.on("message", (event, message) => {
+electron_1.ipcMain.on("message", (event, message) => {
     console.log(message);
     setTimeout(() => event.sender.send("message", "hi from electron"), 500);
 });

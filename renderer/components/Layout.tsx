@@ -9,9 +9,9 @@ type Props = {
   title?: string;
 };
 
-const Layout = ({ children}) => {
+const Layout = ({children, title=""}) => {
   return (
-    <div classname="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-gray-100">
       <Sidebar/>
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header />
