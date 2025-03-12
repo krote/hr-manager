@@ -15,8 +15,8 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({ href, icon, text, isActiv
         <div
           className={`flex items-center px-4 py-3 mb-2 rounded transition-colors ${
             isActive
-              ? 'bg-blue-600 text-white'
-              : 'text-gray-600 hover:bg-blue-500 hover:text-white'
+              ? 'bg-blue-200 text-white'
+              : 'text-gray-200 hover:bg-blue-100 hover:text-white'
           }`}
         >
           <div className="mr-3">{icon}</div>
@@ -31,7 +31,7 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({ href, icon, text, isActiv
     const currentPath = router.pathname;
   
     return (
-      <div className="w-64 bg-white shadow-md">
+      <div className="w-64 h-screen flex-shrink-0 bg-white shadow-md">
         <div className="p-4">
           <h1 className="text-2xl font-bold text-blue-600">Data Explorer</h1>
         </div>

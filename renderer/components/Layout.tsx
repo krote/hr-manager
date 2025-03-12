@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Sidebar from './Sidebar';
 import Header from './Header';
+import "tailwindcss";
 
 type Props = {
   children: ReactNode;
@@ -11,8 +12,10 @@ type Props = {
 
 const Layout = ({children, title=""}) => {
   return (
-    <div className="flex h-screen bg-gray-100">
-      <Sidebar/>
+    <div className="flex flex-row h-screen overflow-hidden bg-gray-100">
+      <div className="h-full">
+        <Sidebar/>
+      </div>
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header />
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
@@ -20,7 +23,18 @@ const Layout = ({children, title=""}) => {
         </main>
       </div>
     </div>
-  )
+/*    <div className="flex flex-row h-screen w-full overflow-hidden bg-gray-100">
+      <div className="h-full">
+        <Sidebar/>
+      </div>
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <Header />
+        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
+          {children}
+        </main>
+      </div>
+    </div>
+*/  )
 }
 
 /*

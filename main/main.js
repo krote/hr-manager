@@ -12,6 +12,8 @@ const { create } = require("domain");
 const electron_is_dev_1 = __importDefault(require("electron-is-dev"));
 const electron_next_1 = __importDefault(require("electron-next"));
 
+let mainWindow;
+
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
@@ -30,6 +32,7 @@ function createWindow() {
             protocol: "file:",
             slashes: true,
         });
+    console.info("url:", url);
     mainWindow.loadURL(url);
 
     mainWindow.on('closed', () => {

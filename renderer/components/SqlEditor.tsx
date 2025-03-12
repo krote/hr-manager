@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SampleQuery } from '../types';
+import { SampleQuery } from '../types/index';
 
 interface SqlEditorProps {
   onExecute: (sql: string) => void;

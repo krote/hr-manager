@@ -29,6 +29,9 @@ electron_1.app.on("ready", async () => {
             protocol: "file:",
             slashes: true,
         });
+    if (electron_is_dev_1.default) {
+        mainWindow.webContents.openDevTools();
+    }
     mainWindow.loadURL(url);
 });
 // Quit the app once all windows are closed
