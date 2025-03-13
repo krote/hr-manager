@@ -12,15 +12,12 @@ type Props = {
 
 const Layout = ({children, title=""}) => {
   return (
-    <div className="flex flex-row h-screen overflow-hidden bg-gray-100">
-      <div className="h-full">
-        <Sidebar/>
+    <div className="flex bg-gray-100">
+      <div className="">
+        a
       </div>
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <Header />
-        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
-          {children}
-        </main>
+      <div className="">
+        b
       </div>
     </div>
 /*    <div className="flex flex-row h-screen w-full overflow-hidden bg-gray-100">
