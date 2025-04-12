@@ -10,9 +10,12 @@ const url_1 = require("url");
 const electron_1 = require("electron");
 const electron_is_dev_1 = __importDefault(require("electron-is-dev"));
 const electron_next_1 = __importDefault(require("electron-next"));
+const database_1 = require("./database");
 // Prepare the renderer once the app is ready
 electron_1.app.on("ready", async () => {
     await (0, electron_next_1.default)("./renderer");
+    // データベースを初期化
+    (0, database_1.initDatabase)();
     const mainWindow = new electron_1.BrowserWindow({
         width: 800,
         height: 600,

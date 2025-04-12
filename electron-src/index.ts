@@ -6,10 +6,14 @@ import { format } from "url";
 import { BrowserWindow, app, ipcMain, IpcMainEvent } from "electron";
 import isDev from "electron-is-dev";
 import prepareNext from "electron-next";
+import { initDatabase } from "./database";
 
 // Prepare the renderer once the app is ready
 app.on("ready", async () => {
   await prepareNext("./renderer");
+  
+  // データベースを初期化
+  initDatabase();
 
   const mainWindow = new BrowserWindow({
     width: 800,

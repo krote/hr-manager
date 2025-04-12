@@ -26,8 +26,8 @@ export function initDatabase() {
     `);
 
     // サンプルデータの挿入（テスト用）
-    const count = db.prepare('SELECT COUNT(*) as count FROM sample_data').get();
-    if (count.count === 0) {
+    const result = db.prepare('SELECT COUNT(*) as count FROM sample_data').get() as { count: number };
+    if (result.count === 0) {
       const insert = db.prepare('INSERT INTO sample_data (name, value, category, date) VALUES (?, ?, ?, ?)');
       insert.run('製品A', 120, '電子機器', '2024-01-15');
       insert.run('製品B', 85, '電子機器', '2024-01-20');
@@ -61,9 +61,9 @@ function setupIpcHandlers() {
         const info = stmt.run();
         return { success: true, changes: info.changes };
       }
-    } catch (error) {
+    } catch (error: unknown) {
       console.error('Query execution error:', error);
-      return { success: false, error: error.message };
+      return { success: false, error: error instanceof Error ? error.message : String(error) };
     }
   });
 }

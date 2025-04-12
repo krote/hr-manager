@@ -14,3 +14,8 @@ contextBridge.exposeInMainWorld("electron", {
     handler: (event: IpcRendererEvent, ...args: any[]) => void,
   ) => ipcRenderer.removeListener("message", handler),
 });
+
+contextBridge.exposeInMainWorld('electronAPI', {
+  // SQLクエリを実行する関数
+  executeQuery: (query: string) => ipcRenderer.invoke('execute-query', query),
+});
