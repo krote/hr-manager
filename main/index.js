@@ -11,11 +11,14 @@ const electron_1 = require("electron");
 const electron_is_dev_1 = __importDefault(require("electron-is-dev"));
 const electron_next_1 = __importDefault(require("electron-next"));
 const database_1 = require("./database");
+const transcription_1 = require("./transcription");
 // Prepare the renderer once the app is ready
 electron_1.app.on("ready", async () => {
     await (0, electron_next_1.default)("./renderer");
     // データベースを初期化
     (0, database_1.initDatabase)();
+    // 文字起こし・感情分析ハンドラを設定
+    (0, transcription_1.setupTranscriptionHandlers)();
     const mainWindow = new electron_1.BrowserWindow({
         width: 800,
         height: 600,

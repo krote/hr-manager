@@ -7,6 +7,7 @@ import { BrowserWindow, app, ipcMain, IpcMainEvent } from "electron";
 import isDev from "electron-is-dev";
 import prepareNext from "electron-next";
 import { initDatabase } from "./database";
+import { setupTranscriptionHandlers } from "./transcription";
 
 // Prepare the renderer once the app is ready
 app.on("ready", async () => {
@@ -14,6 +15,9 @@ app.on("ready", async () => {
   
   // データベースを初期化
   initDatabase();
+  
+  // 文字起こし・感情分析ハンドラを設定
+  setupTranscriptionHandlers();
 
   const mainWindow = new BrowserWindow({
     width: 800,

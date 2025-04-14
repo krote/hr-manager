@@ -14,4 +14,8 @@ electron_1.contextBridge.exposeInMainWorld("electron", {
 electron_1.contextBridge.exposeInMainWorld('electronAPI', {
     // SQLクエリを実行する関数
     executeQuery: (query) => electron_1.ipcRenderer.invoke('execute-query', query),
+    // 動画ファイル選択関数
+    selectVideoFile: () => electron_1.ipcRenderer.invoke('select-video-file'),
+    // 文字起こし・感情分析関数
+    transcribeVideo: (filePath) => electron_1.ipcRenderer.invoke('transcribe-video', filePath),
 });
