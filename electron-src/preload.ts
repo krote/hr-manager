@@ -19,9 +19,11 @@ contextBridge.exposeInMainWorld('electronAPI', {
   // SQLクエリを実行する関数
   executeQuery: (query: string) => ipcRenderer.invoke('execute-query', query),
   
-  // 動画ファイル選択関数
+  // 文字起こし関連の関数
   selectVideoFile: () => ipcRenderer.invoke('select-video-file'),
-  
-  // 文字起こし・感情分析関数
   transcribeVideo: (filePath: string) => ipcRenderer.invoke('transcribe-video', filePath),
+  
+  // 文字起こし設定関連の関数
+  getTranscriptionConfig: () => ipcRenderer.invoke('get-transcription-config'),
+  updateTranscriptionConfig: (config: any) => ipcRenderer.invoke('update-transcription-config', config),
 });
